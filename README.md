@@ -2,6 +2,8 @@
 
 ## 配置
 
+将 `config.template.py` 重命名为 `config.py` ，并修改如下配置:
+
 - QB_URL：QB链接
 - QB_USER：QB用户
 - QB_PASSWORD：QB用户密码
