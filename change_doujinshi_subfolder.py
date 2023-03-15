@@ -16,6 +16,7 @@ def change_doujinshi_subfolder_with_event(torrents, client):
         download_path = torrent["save_path"]
 
         # 跳过路径中包含特定字符串的种子。比如这里Artist的子目录下无需再创建Event子目录
+        flag = False
         for word in SKIP_PATH:
             if word in download_path:
                 flag = True
@@ -32,6 +33,9 @@ def change_doujinshi_subfolder_with_event(torrents, client):
 
             # 检查路径是否已包含前缀子目录
             if not download_path.endswith(event):
+
+                # 可以重新指定Event目录
+                # download_path = download_path.replace("/QB/Doujinshi/E-Hentai", "/QB/Doujinshi/Event")
                 # 在路径末尾添加前缀子目录
                 new_download_path = f"{download_path}/{event}/"
 
@@ -54,6 +58,7 @@ def change_doujinshi_subfolder_with_artist(torrents, client):
         # 获取种子下载路径
         download_path = torrent["save_path"]
 
+        flag = False
         for word in SKIP_PATH:
             if word in download_path:
                 flag = True
