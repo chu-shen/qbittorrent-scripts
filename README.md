@@ -1,6 +1,10 @@
 # qbittorrent-scripts
 
-## 配置
+## 修改同人志子目录
+
+将QB RSS订阅下载的同人志再次进行分类整理
+
+### 配置
 
 将 `config.template.py` 重命名为 `config.py` ，并修改如下配置:
 
@@ -17,10 +21,15 @@
 
 
 
-## 使用
+### 使用
 
 ```shell
 pip install python-qbittorrent
 
 python main.py
 ```
+
+### TODO
+
+- 调整Artist整理逻辑
+- 调整Event整理逻辑
