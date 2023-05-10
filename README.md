@@ -15,8 +15,7 @@
 
 - EVENT_REGEX：需要创建子目录的Event。建议搭配QB RSS正则使用，将所有Event下载至Event目录，然后使用此脚本分类
 
-- ARTIST_REGEX：需要创建子目录并归类的Artist
-- ARTIST_BASE_PATH_FOR_DOCKER：脚本运行环境（比如Docker）能访问到文件的艺术家目录
+- ARTIST_BASE_PATH_FOR_DOCKER：脚本运行环境（比如Docker）能访问到文件的艺术家目录。会根据此目录下艺术家名称在种子中查找。
 - ARTIST_BASE_PATH_FOR_QB：QB保存文件时使用的艺术家目录
 
 
@@ -32,4 +31,6 @@ python main.py
 ### TODO
 
 - 调整Artist整理逻辑
+    - 英文名匹配问题
+    - 匹配不精准问题
 - 调整Event整理逻辑
